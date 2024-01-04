@@ -6,9 +6,8 @@ class Check extends HTMLElement {
 
     connectedCallback() {
         this.render();
+
     }
-    
-    
 
     render() {
 
@@ -17,37 +16,29 @@ class Check extends HTMLElement {
 
         <form class="checkout_details" method="post">
             <h1>Checkout</h1>
+            
             <h2>Detalles de Envío</h2>
             <label for="nombre">Nombre completo:</label>
             <input type="text" id="nombre" name="nombre" required>
 
-            <label for="direccion">Dirección de envío:</label>
-            <textarea id="direccion" name="direccion" required></textarea>
-
             <label for="telefono">Número de teléfono:</label>
             <input type="tel" id="telefono" name="telefono" required>
+            
+            <label for="nombre_usuario">Nombre de usuario:</label>
+            <input type="text" id="nombre_usuario" name="nombre_usuario" required>
 
-            <h2>Información de Facturación</h2>
-            <label for="direccion_facturacion">Dirección de facturación:</label>
-            <textarea id="direccion_facturacion" name="direccion_facturacion" required></textarea>
+            <label for="correo">Correo electrónico del comprador:</label>
+            <input type="email" id="correo" name="correo" required>
 
-            <h2>Método de Envío</h2>
-            <label for="metodo_envio">Selecciona un método de envío:</label>
-            <select id="metodo_envio" name="metodo_envio" required>
-                <option value="envio_estandar">Envío Estándar</option>
-                <option value="envio_rapido">Envío Rápido</option>
-                <option value="envio_express">Envío Express</option>
-            </select>
+            <h2>Información de Pago</h2>
 
-
-            <h2>Método de Pago</h2>
-            <label for="tarjeta">Número de tarjeta de crédito:</label>
-            <input type="text" id="tarjeta" name="tarjeta" required>
+            <label for="numero_tarjeta">Número de tarjeta de crédito:</label>
+            <input type="text" id="numero_tarjeta" name="numero_tarjeta" required>
 
             <label for="fecha_vencimiento">Fecha de vencimiento:</label>
             <input type="text"  name="fecha_vencimiento" placeholder="MM/AA" required>
 
-            <label for="cvv">CVV:</label>
+            <label for="cvv">Código de seguridad de la tarjeta (CVV/CVC):</label>
             <input type="text" id="cvv" name="cvv" required>
         </form>
         
@@ -83,6 +74,11 @@ class Check extends HTMLElement {
                 text-indent:1rem;
                 color: var(--white);
                 margin-bottom: 1rem;
+            }
+            input:disabled,
+            select:disabled,
+            textarea:disabled {
+                background-color: hsl(259, 76%, 48%);
             }
         </style>
 

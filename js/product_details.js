@@ -32,7 +32,6 @@ class Product extends HTMLElement {
                                 </svg>
                                 </div>
                             </a>
-                            <h3>En Stock</h3>
                         </div>
                     <div class="age_rating">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/PEGI_18.svg/640px-PEGI_18.svg.png">
@@ -54,12 +53,9 @@ class Product extends HTMLElement {
                 </div>
             </div>
             <p class="game_description_text">Yoshi Committs Tax Fraud refers to jokes that the Nintendo character Yoshi
-                of
-                the Super
-                Mario series illegally evaded paying his taxes.
+                of the Super Mario series illegally evaded paying his taxes.
                 The joke saw minor spread on social media before being popularized by several Siivagunner videos in
-                April of
-                2018.
+                April of 2018.
             </p>
 
 
@@ -163,13 +159,6 @@ class Product extends HTMLElement {
             .product_status {
                 display:flex;
                 gap:2rem;
-            }
-
-            .product_status h3{
-                color:var(--sale);
-                font-size:30px;
-                font-weight:900;
-                text-decoration:none;
             }
 
             .price {

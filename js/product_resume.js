@@ -8,6 +8,14 @@ class ProductResume extends HTMLElement {
         this.render();
     }
 
+    removeItemHandler(event) {
+        const listItem = event.target.closest('li');
+        
+        if (listItem) {
+            listItem.remove();
+        }
+    }
+
     render() {
 
         this.shadow.innerHTML =
@@ -26,8 +34,9 @@ class ProductResume extends HTMLElement {
                 margin: 0;
             }
 
-            .product h3{
+            .title{
                 margin: 0;
+                width:45rem;
                 font-size: var(--title);
                 color: var(--white);
                 font-weight: 900;
@@ -121,9 +130,8 @@ class ProductResume extends HTMLElement {
         </style>
 
         <ul class="product">
-            <h3>Tu carrito</h3>
+            <h3 class="title">Tu carrito</h3>
             <li class="product_details">
-
                 <div class="image_container">
                     <img class="game_image" src="images/box_art1.png" alt="Nombre del juego">
                 </div>
@@ -161,7 +169,12 @@ class ProductResume extends HTMLElement {
             </li>
         </ul>
         `;
-        
+
+        const removeButtons = this.shadow.querySelectorAll('.remove-item');
+        removeButtons.forEach((button) => {
+            button.addEventListener('click', this.removeItemHandler);
+        });
+
         const gameImages = this.shadow.querySelectorAll('.game_image');
         gameImages.forEach((image) => {
             image.addEventListener('click', () => {

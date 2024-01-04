@@ -14,8 +14,7 @@ class Slider extends HTMLElement {
         this.shadow.innerHTML =
         /*html*/`
         
-        <style>
-        /* slider */
+        <style> 
             .slider {
                 position: relative;
                 overflow: hidden;
@@ -145,6 +144,4 @@ class Slider extends HTMLElement {
         arrowRight.addEventListener('click', () => changeSlide(1));
     }
 }
-customElements.define('slider-component', Slider);
-
-
+customElements.define('slider-component', Slider)
