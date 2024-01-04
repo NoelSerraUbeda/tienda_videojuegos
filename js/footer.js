@@ -27,22 +27,22 @@ class Footer extends HTMLElement {
             <div class="footer-section">
                 <h4>Elementos Principales</h4>
                 <ul class="footer-section_elements">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="./inicio.html">Inicio</a></li>
+                    <li><a href="https://i.pinimg.com/originals/22/30/e9/2230e960b76375b0224494ffe27e1d44.gif">Productos</a></li>
+                    <li><a href="https://i.pinimg.com/originals/22/30/e9/2230e960b76375b0224494ffe27e1d44.gif">Ofertas</a></li>
+                    <li><a href="./faqs.html">Faqs</a></li>
                 </ul>
 
             </div>
 
             <div class="footer-section">
                 <h4>Carrito</h4>
-                <a href="#" class="footer-link">Ver Carrito</a>
+                <a href="./carrito.html" class="footer-link">Ver Carrito</a>
             </div>
 
             <div class="footer-section">
                 <h4>Mapa del Sitio</h4>
-                <a href="#" class="footer-link">Ver Mapa del Sitio</a>
+                <a href="https://i.pinimg.com/originals/22/30/e9/2230e960b76375b0224494ffe27e1d44.gif" class="footer-link">Ver Mapa del Sitio</a>
             </div>
         </div>
 

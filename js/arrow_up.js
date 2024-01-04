@@ -14,7 +14,7 @@ class Arrow extends HTMLElement {
             <style>
                 .up-arrow {
                     background-image: url("./images/the_knight.png");
-                    background-color:var(--primary_color);
+                    background-color:var(--white);
                     background-size: 10rem;
                     padding:4rem;
                     border: var(--secondary_color) solid 3px;

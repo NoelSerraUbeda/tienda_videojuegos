@@ -27,15 +27,17 @@ class Recent extends HTMLElement {
         <h2>Vistos Recientes</h2>
         <section class="section_recent">
             <div class="game_card" data-title="Mario is Gaming" data-price="29.99">
-                <img src="images/box_art4.jpg" alt="box-art3">
+                <img src="images/box_art4.jpg" alt="box-art1">
                 <p class="sale">20%</p>
             </div>
             <div class="game_card" data-title="Painting Simulator" data-price="19.99">
-                <img src="images/box_art3.png" alt="box-art1">
+                <img src="images/box_art3.png" alt="box-art2">
             </div>
-
             <div class="game_card" data-title="Yoshi Commits Tax Fraud" data-price="39.99">
-                <img src="images/box_art1.png" alt="box-art1">
+                <img src="images/box_art1.png" alt="box-art3">
+            </div>
+            <div class="game_card" data-title="Monster Hunter World" data-price="39.99">
+                <img src="https://gamefaqs.gamespot.com/a/box/4/1/9/635419_front.jpg" alt="box-art4">
             </div>
         </section>
 

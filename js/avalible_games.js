@@ -8,7 +8,7 @@ class Avalible extends HTMLElement {
         this.render();
         this.addCardClickListener();
     }
-    
+
     addCardClickListener() {
         var gameCards = this.shadow.querySelectorAll('.game_card');
 
@@ -39,9 +39,8 @@ class Avalible extends HTMLElement {
                 <div class="game_card" data-title="Donkey Kong Coconut Crackers" data-price="29.99">
                     <img src="images/box_art5.jpg" alt="box-art4">
                 </div>
-                <div class="game_card" data-title="Marvel Spider-man" data-price="59.99">
-                    <img src="https://cdna.artstation.com/p/assets/images/images/010/255/616/large/julie-tardieu-spider-man-jaquette-5acc8069c8f7a.jpg?1523441368"
-                    alt="box-art6">
+                    <div class="game_card" data-title="Painting Simulator" data-price="19.99">
+                    <img src="images/box_art3.png" alt="box-art2">
                 </div>
                 <div class="game_card" data-title="Yoshi Commits Tax Fraud" data-price="29.99">
                     <img src="images/box_art1.png" alt="box-art5">
@@ -55,7 +54,10 @@ class Avalible extends HTMLElement {
                 </div>
                 <div class="game_card" data-title="Dragon Ball Kakarot" data-price="49.99">
                     <img src="https://m.media-amazon.com/images/I/812S8JMyKdL._AC_SX569_.jpg" alt="box-art8">
-                </div>              
+                </div>
+                <div class="game_card" data-title="Monster Hunter World" data-price="39.99">
+                    <img src="https://gamefaqs.gamespot.com/a/box/4/1/9/635419_front.jpg" alt="box-art4">
+                </div>               
             </div>
         </section>
 
@@ -178,7 +180,7 @@ class Avalible extends HTMLElement {
 
       `;
     }
-    
+
 }
 customElements.define('avalible_games-component', Avalible);
 

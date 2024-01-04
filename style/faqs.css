@@ -12,12 +12,41 @@ h1 {
 
 h2 {
     background-color: var(--primary_color);
+    cursor: pointer;
+    margin-bottom: 0;
+    height: 3.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
-p {
-
+.faq_section .answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
 }
-.faq-section {
+
+.faq_section .answer.active {
+    height: 5rem;
+}
+
+.answer p {
+    padding: 1rem;
+    font-size: var(--title);
+}
+
+.faq_section {
     background-color: var(--secondary_color);
     color: var(--white);
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-out;
+}
+
+.active.arrow-icon {
+    transform: rotate(180deg);
 }
