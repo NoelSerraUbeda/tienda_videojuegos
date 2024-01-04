@@ -12,7 +12,6 @@ class Product extends HTMLElement {
 
         this.shadow.innerHTML =
         /*html*/`
-        <section class="product_details">
             <h1>Yoshi Commits Tax Fraud</h1>
             <div class="section">
                 <img class="product_image" src="images/box_art1.png" alt="Nombre del Juego">
@@ -62,28 +61,20 @@ class Product extends HTMLElement {
                 April of
                 2018.
             </p>
-        </section>
+
 
         <style>
-            h1 {
-                text-align: center;
-                font-size: 36px;
-            }
-
-            .product_details {
-                max-width: 1200px;
-                margin: 50px auto;
-                padding: 2rem;
-                background-color: rgb(255, 255, 255);
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 1rem;
-            }
 
             .section {
                 display: flex;
                 justify-content: space-around;
                 margin: auto;
                 width: 100%;
+            }
+            
+            h1 {
+                text-align: center;
+                font-size: 36px;
             }
 
             .game_description {
@@ -194,7 +185,12 @@ class Product extends HTMLElement {
                 flex-direction:row-reverse;
                 justify-content:center;
                 alig-items:center;
-                gap:1rem
+                gap:1rem;
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .price:hover {
+                transform: scale(1.1);
             }
 
             .send_cart {

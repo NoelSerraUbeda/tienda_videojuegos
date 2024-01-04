@@ -13,3 +13,4 @@ import './arrow_up.js';
 import './check_details.js';
 import './check_resume.js';
 import './faqs.js';
+import './gallery.js';

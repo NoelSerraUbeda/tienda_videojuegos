@@ -14,9 +14,9 @@ class Arrow extends HTMLElement {
             <style>
                 .up-arrow {
                     background-image: url("./images/the_knight.png");
-                    background-color:var(--white);
+                    background-color: var(--white);
                     background-size: 10rem;
-                    padding:4rem;
+                    padding: 4rem;
                     border: var(--secondary_color) solid 3px;
                     color: #fff;
                     border-radius: 20%;
@@ -29,27 +29,38 @@ class Arrow extends HTMLElement {
                     display: none;
                     z-index: 999;
                 }
-                .up-arrow:hover{
+
+                .up-arrow:hover::after {
+                    content: "Yo te subo";
+                    position: absolute;
+                    top: -40%;
+                    left: -10%; 
+                    padding: 5px;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: #fff;
+                    border-radius: 5px;
+                    white-space: nowrap;
                     animation: shake 0.5s;
                 }
-                
+
                 @keyframes shake {
-                0%, 100% {
-                    transform: rotate(0deg);
+                    0%, 100% {
+                        transform: rotate(0deg);
+                    }
+                    20% {
+                        transform: rotate(5deg);
+                    }
+                    40% {
+                        transform: rotate(-5deg);
+                    }
+                    60% {
+                        transform: rotate(3deg);
+                    }
+                    80% {
+                        transform: rotate(-3deg);
+                    }
                 }
-                20% {
-                    transform: rotate(5deg);
-                }
-                40% {
-                    transform: rotate(-5deg);
-                }
-                60% {
-                    transform: rotate(3deg);
-                }
-                80% {
-                    transform: rotate(-3deg);
-                }
-            }
+
             </style>
 
             <div class="up-arrow"></div>

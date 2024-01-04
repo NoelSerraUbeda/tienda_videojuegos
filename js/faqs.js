@@ -38,8 +38,9 @@ class Faqs extends HTMLElement {
                     </svg></h2>
                 <div class="answer">
                     <p>Una vez que tu pedido haya sido enviado, recibirás un correo electrónico con un enlace de
-                        seguimiento. Puedes hacer clic en ese enlace para verificar el estado y la ubicación actual de
-                        tu pedido.</p>
+                    seguimiento.<br> 
+                    Puedes hacer clic en ese enlace para verificar el estado y la ubicación actual de
+                    tu pedido.</p>
                 </div>
             </div>
 
@@ -50,8 +51,8 @@ class Faqs extends HTMLElement {
                         <path d="M6 9l6 6 6-6"></path>
                     </svg></h2>
                 <div class="answer">
-                    <p>Aceptamos tarjetas de crédito y débito, así como opciones de pago en línea como PayPal. Puedes
-                        seleccionar tu método de pago preferido durante el proceso de compra.
+                    <p>Aceptamos tarjetas de crédito y débito, así como opciones de pago en línea como PayPal.<br> 
+                    Puedes seleccionar tu método de pago preferido durante el proceso de compra.
                     </p>
                 </div>
             </div>
@@ -63,9 +64,8 @@ class Faqs extends HTMLElement {
                         <path d="M6 9l6 6 6-6"></path>
                     </svg></h2>
                 <div class="answer">
-                    <p>Sí, aceptamos devoluciones dentro de los 30 días posteriores a la compra. El juego debe estar
-                        en su empaque original. Consulta nuestra sección de Política de Devoluciones para
-                        obtener más detalles.
+                    <p>Sí, aceptamos devoluciones dentro de los 30 días posteriores a la compra.<br>
+                    El juego debe estar en su empaque original. Consulta nuestra sección de Política de Devoluciones para obtener más detalles.
                     </p>
                 </div>
             </div>
@@ -78,7 +78,8 @@ class Faqs extends HTMLElement {
                     </svg></h2>
                 <div class="answer">
                     <p>Después de completar la compra, recibirás un correo electrónico con instrucciones y un enlace
-                        de descarga. También puedes acceder a tus compras digitales desde tu cuenta en nuestra tienda.
+                    de descarga.<br>
+                    También puedes acceder a tus compras digitales desde tu cuenta en nuestra tienda.
                     </p>
                 </div>
             </div>
@@ -90,8 +91,8 @@ class Faqs extends HTMLElement {
                         <path d="M6 9l6 6 6-6"></path>
                     </svg></h2>
                 <div class="answer">
-                    <p>Sí, garantizamos la calidad de nuestros productos. Si encuentras algún defecto en el juego
-                        físico, contáctanos y te proporcionaremos una solución, ya sea un reemplazo o un reembolso.
+                    <p>Sí, garantizamos la calidad de nuestros productos.<br>
+                    Si encuentras algún defecto en el juego físico, contáctanos y te proporcionaremos una solución, ya sea un reemplazo o un reembolso.
                     </p>
                 </div>
             </div>
@@ -121,6 +122,10 @@ class Faqs extends HTMLElement {
                 padding: 1rem;
             }
 
+            .faq_section:hover {
+                transform: scale(1.01);
+            }
+
             .faq_section .answer {
                 height: 0;
                 overflow: hidden;
@@ -139,11 +144,11 @@ class Faqs extends HTMLElement {
             .faq_section {
                 background-color: var(--secondary_color);
                 color: var(--white);
+                transition: transform 0.2s ease-in-out;
             }
 
             .arrow-icon {
-                width: 24px;
-                height: 24px;
+                width: 4rem;
                 transition: transform 0.3s ease-out;
             }
 
