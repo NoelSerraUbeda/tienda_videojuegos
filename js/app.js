@@ -10,3 +10,6 @@ import './slider.js';
 import './pay_resume.js';
 import './product_resume.js';
 import './arrow_up.js';
+import './check_details.js';
+import './check_resume.js';
+import './faqs.js';
