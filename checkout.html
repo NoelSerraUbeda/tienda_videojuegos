@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Codificación de carácteres -->
+    <meta charset="utf-8">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="icons/icon_logo.svg">
+
+    <!-- Etiquetas con propósito de SEO -->
+    <title>Checkout</title>
+    <meta name="description" content="Detalles del carrito de compras para videojuegos">
+    <meta name="keywords" content="videojuegos, carrito de compras, comprar juegos">
+
+    <!-- Compartir en redes sociales -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Carrito de Compras" />
+    <meta property="og:description" content="Detalles del carrito de compras para videojuegos" />
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/1245/1245778.png" />
+
+    <!-- Fuentes de la web -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <!-- Documentos enlazados -->
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/check.css">
+    <script type="module" src="/js/app.js"></script>
+</head>
+
+<body style="background-color: lightgreen">
+    <header>
+        <!-- Navbar principal -->
+        <navbar-component></navbar-component>
+        <!-- Plataformas -->
+        <platforms-component></platforms-component>
+    </header>
+    <main>
+        <div class="checkout">
+            <!-- Datos del cliente -->
+            <form class="checkout_details" method="post">
+                <h1>Checkout</h1>
+                <h2>Detalles de Envío</h2>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="direccion">Dirección de envío:</label>
+                <textarea id="direccion" name="direccion" required></textarea>
+
+                <label for="telefono">Número de teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <h2>Información de Facturación</h2>
+                <label for="direccion_facturacion">Dirección de facturación:</label>
+                <textarea id="direccion_facturacion" name="direccion_facturacion" required></textarea>
+
+                <h2>Método de Envío</h2>
+                <label for="metodo_envio">Selecciona un método de envío:</label>
+                <select id="metodo_envio" name="metodo_envio" required>
+                    <option value="envio_estandar">Envío Estándar</option>
+                    <option value="envio_rapido">Envío Rápido</option>
+                    <option value="envio_express">Envío Express</option>
+                </select>
+
+
+                <h2>Método de Pago</h2>
+                <label for="tarjeta">Número de tarjeta de crédito:</label>
+                <input type="text" id="tarjeta" name="tarjeta" required>
+
+                <label for="fecha_vencimiento">Fecha de vencimiento:</label>
+                <input type="text" id="fecha_vencimiento" name="fecha_vencimiento" placeholder="MM/AA" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </form>
+            <!-- Productos a pagar -->
+            <div class="resume_zone">
+                <div class="resume_zone_product">
+                    <div class="image_container">
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f2395164-1b0c-43f2-b791-eed469f64075/d7r4cap-3e96e574-27d1-41e2-873e-98e565a75521.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2YyMzk1MTY0LTFiMGMtNDNmMi1iNzkxLWVlZDQ2OWY2NDA3NVwvZDdyNGNhcC0zZTk2ZTU3NC0yN2QxLTQxZTItODczZS05OGU1NjVhNzU1MjEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yIyz-FdOK7YiaKZn_5LaiZPwbGP5_8i1sxneoam9YLA"
+                            alt="box-art2">
+                    </div>
+                    <div class="product_summary">
+                        <p>Kingdom Hearts 2.5 Remix</p>
+                        <p>Envio desde:</p>
+                        <p>Producto: Físico</p>
+                    </div>
+                </div>
+                <div class="resume_zone_product">
+                    <div class="image_container">
+                        <img class="game_image" src="images/box_art1.png" alt="Nombre del juego">
+                    </div>
+                    <div class="product_summary">
+                        <p>Yoshi Commits Tax Fraud</p>
+                        <p>Envio desde:</p>
+                        <p>Producto: Físico</p>
+                    </div>
+                </div>
+                <div class="price_summary">
+                    <p>Total a Pagar: $59,98</p>
+                </div>
+                <div class="cart_summary">
+                    <h4>Resumen:</h4>
+                    <div class="checkout_button">
+                        <button><a href="checkout.html">Proceder al Pago</a></button>
+                    </div>
+                    <p>2 Articulos</p>
+                    <p>Tarifa de servicios:--</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- Footer -->
+        <footer-component></footer-component>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var gameImages = document.querySelectorAll('.game_image');
+            gameImages.forEach(function (image) {
+                image.addEventListener('click', function () {
+                    window.location.href = 'ficha.html';
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

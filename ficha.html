@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Codificación de carácteres -->
+    <meta charset="utf-8">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="icons/icon_logo.svg">
+
+    <!-- Etiquetas con proposito de SEO, el título y la descripción aparecerán en los resultados de Google,
+    la etiqueta keywords se ha quedado obsoleta -->
+    <title>Ficha</title>
+    <meta name="description" content="descripción de la web, se recomienda 90 caracteres">
+    <meta name="keywords" content="palabras clave, separadas, por comas">
+
+    <!-- Compartir closees sociales -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Título" />
+    <meta property="og:description" content="descripción de la web, se recomienda 90 caracteres" />
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/1245/1245778.png" />
+
+    <!-- Fuentes de la web -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <!-- Documentos enlazados -->
+    <link rel="stylesheet" href="/style/index.css">
+    <script type="module" src="/js/app.js"></script>
+
+
+</head>
+
+<body style="background-color: purple">
+    <header>
+        <!-- Navbar principal -->
+        <navbar-component></navbar-component>
+        <!-- Plataformas -->
+        <platforms-component></platforms-component>
+    </header>
+    <main>
+        <!-- Breadcrumbs -->
+        <breadcrumbs-component title="Ficha"></breadcrumbs-component>
+        <!-- Producto -->
+        <product-component></product-component>
+    </main>
+    <footer>
+        <!-- Footer -->
+        <footer-component></footer-component>
+    </footer>
+</body>
+
+</html>

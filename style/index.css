@@ -1,0 +1,54 @@
+/* Colores */
+
+:root {
+    --font_style: monospace;
+    --title: 36px;
+    --platforms: 24px;
+    --subtitle: 18px;
+    --game_data: 24px;
+    --primary_color: hsl(40, 88%, 51%);
+    --hovered_primary: hsla(40, 88%, 51%, 0.8);
+    --secondary_color: hsl(259, 76%, 38%);
+    --hovered_secondary: hsl(259, 76%, 28%);
+    --white: white;
+    --background_slider_arrow: hsla(0, 0%, 0%, 0.5);
+    --price: hsl(348, 83%, 47%);
+    --price_text: 30px;
+    --sale: hsl(120, 100%, 25%);
+}
+
+* {
+    font-family: var(--font_style);
+}
+
+h5 {
+    margin: 0;
+}
+
+/* General Styles */
+body {
+    background: hsl(36, 98%, 42%) url(../images/back.svg);
+    margin: 0;
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.title {
+    background-color: var(--secondary_color);
+    margin: 0;
+    color: var(--white);
+    padding: 1rem 0 1rem 8rem;
+    font-size: var(--title);
+}
+
+.cart_details {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 2rem 15rem 2rem 15rem;
+    gap: 10rem;
+}
+

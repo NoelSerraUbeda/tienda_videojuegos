@@ -1,0 +1,23 @@
+.faq {
+    margin: 2rem 10rem 2rem 10rem;
+}
+
+h1 {
+    background-color: var(--secondary_color);
+    font-size: var(--title);
+    color: var(--white);
+    padding: 0.5rem 0 0.5rem 3rem;
+    margin: 0;
+}
+
+h2 {
+    background-color: var(--primary_color);
+}
+
+p {
+
+}
+.faq-section {
+    background-color: var(--secondary_color);
+    color: var(--white);
+}

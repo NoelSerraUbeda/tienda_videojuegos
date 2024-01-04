@@ -1,0 +1,12 @@
+import './avalible_games.js';
+import './breadcrumbs.js';
+import './categories.js';
+import './footer.js';
+import './product_details.js';
+import './principal_navbar.js';
+import './recent_games.js';
+import './secondary_navbar.js';
+import './slider.js';
+import './pay_resume.js';
+import './product_resume.js';
+import './arrow_up.js';
