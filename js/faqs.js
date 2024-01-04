@@ -100,7 +100,7 @@ class Faqs extends HTMLElement {
 
         <style>
             .faq {
-                margin: 2rem 10rem 2rem 10rem;
+                margin: 4rem 10rem 4rem 10rem;
             }
 
             h1 {
@@ -122,6 +122,12 @@ class Faqs extends HTMLElement {
                 padding: 1rem;
             }
 
+            .faq_section {
+                background-color: var(--secondary_color);
+                color: var(--white);
+                transition: transform 0.2s ease-in-out;
+            }
+
             .faq_section:hover {
                 transform: scale(1.01);
             }
@@ -139,12 +145,6 @@ class Faqs extends HTMLElement {
             .answer p {
                 padding: 1rem;
                 font-size: 30px;
-            }
-
-            .faq_section {
-                background-color: var(--secondary_color);
-                color: var(--white);
-                transition: transform 0.2s ease-in-out;
             }
 
             .arrow-icon {
