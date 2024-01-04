@@ -50,7 +50,7 @@ class Platforms extends HTMLElement {
         }
 
         .secondary_navbar_platform:hover {
-            background-color: var(--secondary_color);
+            background-color: var(--dark_secondary);
             color: var(--primary_color);
         }
 

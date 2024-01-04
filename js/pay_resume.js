@@ -113,11 +113,15 @@ class PayZone extends HTMLElement {
                 border: 2px solid var(--primary_color);
                 color: var(--primary_color);
             }    
+
+            h5 {
+                margin: 0;
+            }
         </style>
 
         <div class="resume_zone">
             <div class="cart_summary">
-                <h4>Resumen:</h4>
+                <h4>Resumen</h4>
                 <div class="checkout_button">
                     <button><a href="checkout.html">Continuar con el Pago</a></button>
                 </div>

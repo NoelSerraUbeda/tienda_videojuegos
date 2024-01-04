@@ -34,6 +34,8 @@ class ProductResume extends HTMLElement {
                 margin: 0;
             }
 
+            
+
             .title{
                 margin: 0;
                 width:45rem;

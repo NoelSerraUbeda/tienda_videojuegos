@@ -43,6 +43,11 @@ class Check extends HTMLElement {
         </form>
         
         <style>
+
+            h1 {
+                margin: -1.5rem 0 0 0;
+            }
+
             .checkout_details {
                 background-color: var(--secondary_color);
                 width: 60rem;

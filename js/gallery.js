@@ -16,9 +16,9 @@ class Gallery extends HTMLElement {
             <style>
                 .gallery {
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: center;
                     align-items: center;
-                    margin: 0 10rem 0 10rem;
+                    gap:2rem;
                 }
 
                 .gallery img {

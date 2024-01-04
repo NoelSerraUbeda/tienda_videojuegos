@@ -54,7 +54,7 @@ class Categories extends HTMLElement {
             }
 
             .category_card:hover {
-                background-color: var(--secondary_color);
+                background-color: var(--dark_secondary);
             }
 
             .category_card_elements {
