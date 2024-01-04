@@ -57,7 +57,7 @@ class Avalible extends HTMLElement {
                     <img src="images/box-art2.jpeg" alt="box-art2">
                     <p class="sale">20%</p>
                 </div>
-                <div class="game_card" data-title="Dragon Ball Kakarot" data-price="49.99">
+                <div class="game_card" data-title="Dragon Ball Z Kakarot" data-price="49.99">
                     <img src="https://m.media-amazon.com/images/I/812S8JMyKdL._AC_SX569_.jpg" alt="box-art8">
                 </div>
                 <div class="game_card" data-title="Monster Hunter World" data-price="39.99">
@@ -132,7 +132,7 @@ class Avalible extends HTMLElement {
             }
 
             .game_card img {
-                width: 100%;
+                width: 120%;
                 height: auto;
                 transition: transform 0.3s;
             }
@@ -151,7 +151,7 @@ class Avalible extends HTMLElement {
                 color: var(--hovered_secondary);
                 transform: translateY(100%);
                 transition: transform 0.3s;
-                content: attr(data-title) " - $" attr(data-price);
+                content: attr(data-title) "  $" attr(data-price);
                 justify-content: center;
                 align-items: center;
                 text-align: center;
@@ -168,7 +168,7 @@ class Avalible extends HTMLElement {
             }
 
             .game_card[data-title] {
-                font-size:16px;
+                font-size:20px;
             }
 
             .game_card:hover::after {

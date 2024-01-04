@@ -141,7 +141,6 @@ class ProductResume extends HTMLElement {
                     <h3>Yoshi Commits Tax Fraud</h3>
                     <p>Plataforma: Xbox One</p>
                     <p>Precio: $29.99</p>
-                    <p>Versión: Físico</p>
                 </div>
                 <button class="remove-item">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -160,7 +159,6 @@ class ProductResume extends HTMLElement {
                     <p>Plataforma: PS4</p>
                     <p class="sale_price">Precio: $49.99</p>
                     <p class="discounted_price">Precio: $29.99</p>
-                    <p>Versión: Físico</p>
                 </div>
                 <button class="remove-item">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

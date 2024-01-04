@@ -21,8 +21,8 @@ class Resume extends HTMLElement {
                 </div>
                 <div class="product_summary">
                     <p>Kingdom Hearts 2.5 Remix</p>
-                    <p>Envio desde:</p>
-                    <p>Producto: Físico</p>
+                    <p>Plataforma:</p>
+                    <p>$29,99</p>
                 </div>
             </div>
             <div class="resume_zone_product">
@@ -31,8 +31,8 @@ class Resume extends HTMLElement {
                 </div>
                 <div class="product_summary">
                     <p>Yoshi Commits Tax Fraud</p>
-                    <p>Envio desde:</p>
-                    <p>Producto: Físico</p>
+                    <p>Plataforma:</p>
+                    <p>$29,99</p>
                 </div>
             </div>
             <div class="price_summary">

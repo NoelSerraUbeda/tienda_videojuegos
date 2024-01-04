@@ -92,7 +92,7 @@ class Recent extends HTMLElement {
             }
 
             .game_card img {
-                width: 100%;
+                width: 120%;
                 height: auto;
                 transition: transform 0.3s;
             }
@@ -106,7 +106,7 @@ class Recent extends HTMLElement {
                 color: var(--hovered_secondary);
                 transform: translateY(100%);
                 transition: transform 0.3s;
-                content: attr(data-title) " - $" attr(data-price);
+                content: attr(data-title) "  $" attr(data-price);
                 justify-content: center;
                 align-items: center;
                 text-align: center;
@@ -126,7 +126,7 @@ class Recent extends HTMLElement {
             }
 
             .game_card[data-title] {
-                font-size: 16px;
+                font-size: 20px;
             }
 
             .game_card:hover::after {
