@@ -43,6 +43,10 @@ class Resume extends HTMLElement {
                 <div class="checkout_button">
                     <button><a href="checkout.html">Proceder al Pago</a></button>
                 </div>
+                <div class="pay_platform">
+                    <a href="https://i.makeagif.com/media/4-15-2022/eXwggD.gif"><button class="paypal"></button></a>
+                    <button class="stripe"></button>
+                </div>
                 <p>2 Articulos</p>
                 <p>Tarifa de servicios:--</p>
             </div>
@@ -76,6 +80,14 @@ class Resume extends HTMLElement {
                 cursor: pointer;
             }
 
+            .pay_platform button{
+                width:12rem;
+                height:5rem;
+                cursor:pointer;
+                border:none;
+                border-radius:1rem;
+            }
+
             .checkout_button button:hover {
                 background-color: var(--hovered_primary);
             }
@@ -84,29 +96,24 @@ class Resume extends HTMLElement {
                 text-decoration: none;
                 color: var(--white);
             }
-
-            .cart_summary {
+ 
+            .resume_zone_product, .price_summary, .cart_summary {
                 padding: 2rem;
-                background-color: var(--secondary_color);
                 color: var(--white);
-                line-height: 0;
+                background-color: var(--secondary_color);
                 width: 100%;
             }
 
+            .cart_summary {
+                line-height: 0;
+            }
+
             .price_summary {
-                padding: 2rem;
-                color: var(--white);
-                background-color: var(--secondary_color);
-                width: 100%;
                 font-size: 30px;
             }
 
             .resume_zone_product {
-                padding: 2rem;
-                background-color: var(--secondary_color);
-                color: var(--white);
                 line-height: 0;
-                width: 100%;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -121,6 +128,34 @@ class Resume extends HTMLElement {
                 padding: 0 1rem 1rem 1rem;
                 width: 90%;
             }
+
+            .pay_platform {
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                margin:1rem;
+                gap:2rem;
+            }
+
+            button {
+                transition: transform 0.3s;
+            }
+
+            button:hover{
+                transform: scale(1.1);
+            }
+
+            .paypal {
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14GyMwGoBN1K9sNRIkm2YRcPmyazZUluFJU1o2ZSpj1G6wqCCF_vWz2-BnHJGPbeF8sc&usqp=CAU");
+                background-size:cover;
+            }
+
+            .stripe {
+                background-image: url("https://ps.w.org/easy-stripe/assets/icon-256x256.png?rev=1749623");
+                background-size:cover;
+                background-position: center;
+            }
+
         </style>
 
       `;

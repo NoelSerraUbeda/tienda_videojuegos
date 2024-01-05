@@ -30,7 +30,7 @@ class Check extends HTMLElement {
             <label for="correo">Correo electrónico del comprador:</label>
             <input type="email" id="correo" name="correo" required>
 
-            <h2>Información de Pago</h2>
+            <h2>Información del Pago</h2>
 
             <label for="numero_tarjeta">Número de tarjeta de crédito:</label>
             <input type="text" id="numero_tarjeta" name="numero_tarjeta" required>

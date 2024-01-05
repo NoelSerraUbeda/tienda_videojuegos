@@ -13,6 +13,29 @@ class Gallery extends HTMLElement {
 
     render() {
         this.shadow.innerHTML = /*html*/`
+            
+            <div class="gallery">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtcCnOcMgWnBpaY_X6X0mVsiXsI-_AmDvo_NPQUnbOHQSxtLT0jlEoY7uYTxSjU_QWw1E&usqp=CAU"
+                    alt="Imagen 1">
+                <img
+                    src="https://i.pinimg.com/1200x/8f/93/90/8f9390a7aa046235616345488ff0b718.jpg"
+                    alt="Imagen 2">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Yoshi%27s_Island_-_Gameplay.png/220px-Yoshi%27s_Island_-_Gameplay.png"
+                    alt="Imagen 3">
+                <img
+                    src="https://www.interactive.org/images/games/2003_yoshis_island_sma_3_sm.jpg"
+                    alt="Imagen 4">
+            </div>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <div class="arrow" id="prevArrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-left-box</title><path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M18,11H9.5L13,7.5L11.58,6.08L5.66,12L11.58,17.92L13,16.5L9.5,13H18V11Z" /></svg></div>
+                    <img id="modalImg" src="" alt="Imagen Ampliada">
+                    <div class="arrow" id="nextArrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-box</title><path d="M5,21A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19C21,20.11 20.1,21 19,21H5M6,13H14.5L11,16.5L12.42,17.92L18.34,12L12.42,6.08L11,7.5L14.5,11H6V13Z" /></svg></div>
+                </div>
+            </div>
+            
             <style>
                 .gallery {
                     display: flex;
@@ -104,28 +127,6 @@ class Gallery extends HTMLElement {
                     }
                 }
             </style>
-
-            <div class="gallery">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtcCnOcMgWnBpaY_X6X0mVsiXsI-_AmDvo_NPQUnbOHQSxtLT0jlEoY7uYTxSjU_QWw1E&usqp=CAU"
-                    alt="Imagen 1">
-                <img
-                    src="https://i.pinimg.com/1200x/8f/93/90/8f9390a7aa046235616345488ff0b718.jpg"
-                    alt="Imagen 2">
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Yoshi%27s_Island_-_Gameplay.png/220px-Yoshi%27s_Island_-_Gameplay.png"
-                    alt="Imagen 3">
-                <img
-                    src="https://www.interactive.org/images/games/2003_yoshis_island_sma_3_sm.jpg"
-                    alt="Imagen 4">
-            </div>
-
-            <div id="modal" class="modal">
-                <div class="modal-content">
-                    <div class="arrow" id="prevArrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-left-box</title><path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M18,11H9.5L13,7.5L11.58,6.08L5.66,12L11.58,17.92L13,16.5L9.5,13H18V11Z" /></svg></div>
-                    <img id="modalImg" src="" alt="Imagen Ampliada">
-                    <div class="arrow" id="nextArrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-box</title><path d="M5,21A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19C21,20.11 20.1,21 19,21H5M6,13H14.5L11,16.5L12.42,17.92L18.34,12L12.42,6.08L11,7.5L14.5,11H6V13Z" /></svg></div>
-                </div>
-            </div>
         `;
         this.images = Array.from(this.shadow.querySelectorAll('.gallery img'));
     }

@@ -11,6 +11,9 @@ class Arrow extends HTMLElement {
 
     render() {
         this.shadow.innerHTML = /*html*/`
+    
+            <div class="up-arrow"></div>
+            
             <style>
                 .up-arrow {
                     background-image: url("./images/the_knight.png");
@@ -62,8 +65,6 @@ class Arrow extends HTMLElement {
                 }
 
             </style>
-
-            <div class="up-arrow"></div>
         `;
     }
 

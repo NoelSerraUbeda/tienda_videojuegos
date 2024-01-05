@@ -6,23 +6,38 @@ class Faqs extends HTMLElement {
 
     connectedCallback() {
         this.render();
-        const faqQuestions = this.shadowRoot.querySelectorAll('.faq-question');
+        const faqSections = this.shadowRoot.querySelectorAll('.faq_section');
 
-        faqQuestions.forEach((question) => {
+        faqSections.forEach((section) => {
+            const question = section.querySelector('.faq-question');
+            const answer = section.querySelector('.answer');
+            const arrowIcon = question.querySelector('.arrow-icon');
+
             question.addEventListener('click', function () {
-                const answer = this.nextElementSibling;
-                const arrowIcon = this.querySelector('.arrow-icon');
-
-                if (answer.classList.contains('active')) {
-                    answer.style.height = '0';
-                    answer.classList.remove('active');
+                if (section.classList.contains('active')) {
+                    answer.style.maxHeight = '0';
+                    section.classList.remove('active');
+                    arrowIcon.classList.remove('active');
                 } else {
-                    answer.style.height = answer.scrollHeight + 'px';
-                    answer.classList.add('active');
+                    closeActiveFAQ();
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    section.classList.add('active');
+                    arrowIcon.classList.add('active');
                 }
-                arrowIcon.classList.toggle('active');
             });
         });
+
+        // Función para cerrar el FAQ activo
+        const closeActiveFAQ = () => {
+            const activeSection = this.shadowRoot.querySelector('.faq_section.active');
+            if (activeSection) {
+                const activeAnswer = activeSection.querySelector('.answer');
+                const activeArrowIcon = activeSection.querySelector('.arrow-icon');
+                activeAnswer.style.maxHeight = '0';
+                activeSection.classList.remove('active');
+                activeArrowIcon.classList.remove('active');
+            }
+        };
     }
 
     render() {
@@ -31,16 +46,14 @@ class Faqs extends HTMLElement {
         /*html*/`
         <div class="faq">
             <div class="faq_section">
-                <h2 class="faq-question">¿Cómo puedo realizar un seguimiento de mi pedido?<svg class="arrow-icon"
+                <h2 class="faq-question">¿Cómo puedo comprar un juego?<svg class="arrow-icon"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M6 9l6 6 6-6"></path>
                     </svg></h2>
                 <div class="answer">
-                    <p>Una vez que tu pedido haya sido enviado, recibirás un correo electrónico con un enlace de
-                    seguimiento.<br> 
-                    Puedes hacer clic en ese enlace para verificar el estado y la ubicación actual de
-                    tu pedido.</p>
+                    <p>Para comprar un juego, simplemente navega por nuestra tienda en línea, selecciona el juego que deseas y haz clic en el botón "Comprar".<br> 
+                    Luego, sigue las instrucciones para completar el proceso de pago.</p>
                 </div>
             </div>
 
@@ -58,14 +71,14 @@ class Faqs extends HTMLElement {
             </div>
 
             <div class="faq_section">
-                <h2 class="faq-question">¿Puedo devolver un juego si no estoy satisfecho?<svg class="arrow-icon"
+                <h2 class="faq-question">¿Puedo devolver o reembolsar un juego?<svg class="arrow-icon"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M6 9l6 6 6-6"></path>
                     </svg></h2>
                 <div class="answer">
-                    <p>Sí, aceptamos devoluciones dentro de los 30 días posteriores a la compra.<br>
-                    El juego debe estar en su empaque original. Consulta nuestra sección de Política de Devoluciones para obtener más detalles.
+                    <p>Sí, generalmente ofrecemos reembolsos dentro de un plazo específico después de la compra, siempre y cuando no hayas descargado o jugado el juego.<br> 
+                    Consulta nuestra política de devoluciones para obtener más detalles.
                     </p>
                 </div>
             </div>
@@ -100,7 +113,7 @@ class Faqs extends HTMLElement {
 
         <style>
             .faq {
-                margin: 4rem 10rem 4rem 10rem;
+               margin: 5rem 10rem 5rem 10rem;
             }
 
             h1 {
@@ -133,18 +146,18 @@ class Faqs extends HTMLElement {
             }
 
             .faq_section .answer {
-                height: 0;
+                max-height: 0;
                 overflow: hidden;
-                transition: height 0.5s;
+                transition: max-height 0.5s;
             }
 
             .faq_section .answer.active {
-                height: 5rem;
+                max-height: 5rem;
             }
 
             .answer p {
                 padding: 1rem;
-                font-size: 30px;
+                font-size: 26px;
             }
 
             .arrow-icon {

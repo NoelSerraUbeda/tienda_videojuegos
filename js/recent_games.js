@@ -7,14 +7,24 @@ class Recent extends HTMLElement {
     connectedCallback() {
         this.render();
         this.addCardClickListener();
+        this.addHeartClickListener();
+    }
+
+    addCardClickListener() {
+        const gameCards = this.shadow.querySelectorAll('.game_card img');
+        gameCards.forEach(card => {
+            card.addEventListener('click', () => {
+                window.location.href = 'ficha.html';
+            });
+        });
     }
     
-    addCardClickListener() {
-        var gameCards = this.shadow.querySelectorAll('.game_card');
-
-        gameCards.forEach(function (card) {
-            card.addEventListener('click', function () {
-                window.location.href = 'ficha.html';
+    addHeartClickListener() {
+        const hearts = this.shadow.querySelectorAll('.game_card .heart-svg');
+        hearts.forEach(heart => {
+            heart.addEventListener('click', event => {
+                event.stopPropagation();
+                window.location.href = 'https://i.ytimg.com/vi/T8VBMEbm7Cw/hq2.jpg?sqp=-oaymwEoCOADEOgC8quKqQMcGADwAQH4AeYCgALoAooCDAgAEAEYfyAiKDYwDw==&rs=AOn4CLAJIBIvyBVOB_TKs-u3L6XtVB1hcA';
             });
         });
     }
@@ -71,7 +81,7 @@ class Recent extends HTMLElement {
             .section_recent {
                 align-items: center;
                 display: flex;
-                margin: 0 3rem 2rem 3rem;
+                margin: 0 0rem 2rem 0rem;
             }
 
             .game_card {
@@ -143,10 +153,34 @@ class Recent extends HTMLElement {
                 font-size: 40px;
                 border-radius: 1rem;
             }
-        </style>
+            .heart-svg {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 1.5rem;
+                fill:none;
+                width:3rem;
+                z-index:999;
+                transition: transform 0.3s;
+            }
 
-      `;
+            .heart-svg:hover{
+                transform: scale(1.5);
+                fill: hsl(40, 88%, 51%);
+            }
+        </style>`;
+
+        this.shadow.querySelectorAll('.game_card').forEach((card) => {
+            const heartSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            heartSvg.setAttribute("viewBox", "0 0 24 24");
+            heartSvg.innerHTML = `
+            <path stroke="hsl(40, 88%, 51%)" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+            `;
+            heartSvg.classList.add('heart-svg');
+            card.appendChild(heartSvg);
+        });
     }
-    
+
 }
 customElements.define('recent_games-component', Recent);
+
