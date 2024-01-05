@@ -6,38 +6,23 @@ class Faqs extends HTMLElement {
 
     connectedCallback() {
         this.render();
-        const faqSections = this.shadowRoot.querySelectorAll('.faq_section');
+        const faqQuestions = this.shadowRoot.querySelectorAll('.faq-question');
 
-        faqSections.forEach((section) => {
-            const question = section.querySelector('.faq-question');
-            const answer = section.querySelector('.answer');
-            const arrowIcon = question.querySelector('.arrow-icon');
-
+        faqQuestions.forEach((question) => {
             question.addEventListener('click', function () {
-                if (section.classList.contains('active')) {
-                    answer.style.maxHeight = '0';
-                    section.classList.remove('active');
-                    arrowIcon.classList.remove('active');
+                const answer = this.nextElementSibling;
+                const arrowIcon = this.querySelector('.arrow-icon');
+
+                if (answer.classList.contains('active')) {
+                    answer.style.height = '0';
+                    answer.classList.remove('active');
                 } else {
-                    closeActiveFAQ();
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                    section.classList.add('active');
-                    arrowIcon.classList.add('active');
+                    answer.style.height = answer.scrollHeight + 'px';
+                    answer.classList.add('active');
                 }
+                arrowIcon.classList.toggle('active');
             });
         });
-
-        // Función para cerrar el FAQ activo
-        const closeActiveFAQ = () => {
-            const activeSection = this.shadowRoot.querySelector('.faq_section.active');
-            if (activeSection) {
-                const activeAnswer = activeSection.querySelector('.answer');
-                const activeArrowIcon = activeSection.querySelector('.arrow-icon');
-                activeAnswer.style.maxHeight = '0';
-                activeSection.classList.remove('active');
-                activeArrowIcon.classList.remove('active');
-            }
-        };
     }
 
     render() {
@@ -98,14 +83,14 @@ class Faqs extends HTMLElement {
             </div>
 
             <div class="faq_section">
-                <h2 class="faq-question">¿Ofrecen garantía en los productos?<svg class="arrow-icon"
+                <h2 class="faq-question">¿Puedo transferir el juego a otro dispositivo?<svg class="arrow-icon"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M6 9l6 6 6-6"></path>
                     </svg></h2>
                 <div class="answer">
-                    <p>Sí, garantizamos la calidad de nuestros productos.<br>
-                    Si encuentras algún defecto en el juego físico, contáctanos y te proporcionaremos una solución, ya sea un reemplazo o un reembolso.
+                    <p>Sí, puedes transferir tus juegos a otros dispositivos.<br>
+                    Recomendamos contactar con nuestro soporte para obtener información específica sobre la transferibilidad de cada juego.
                     </p>
                 </div>
             </div>
@@ -113,7 +98,7 @@ class Faqs extends HTMLElement {
 
         <style>
             .faq {
-               margin: 5rem 10rem 5rem 10rem;
+                margin: 4rem 10rem 4rem 10rem;
             }
 
             h1 {
@@ -146,18 +131,18 @@ class Faqs extends HTMLElement {
             }
 
             .faq_section .answer {
-                max-height: 0;
+                height: 0;
                 overflow: hidden;
-                transition: max-height 0.5s;
+                transition: height 0.5s;
             }
 
             .faq_section .answer.active {
-                max-height: 5rem;
+                height: 5rem;
             }
 
             .answer p {
                 padding: 1rem;
-                font-size: 26px;
+                font-size: 28px;
             }
 
             .arrow-icon {
@@ -175,5 +160,3 @@ class Faqs extends HTMLElement {
     
 }
 customElements.define('faqs-component', Faqs);
-
-

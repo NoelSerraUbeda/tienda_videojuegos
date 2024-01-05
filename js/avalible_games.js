@@ -105,20 +105,24 @@ class Avalible extends HTMLElement {
 
             .section_avalibles {
                 overflow-y: hidden;
-                overflow-x: scroll;
+                overflow-x: auto; 
                 align-items: center;
-                margin: 0 0rem 2rem 0rem;
+                margin: 0 0 2rem 0; 
                 display: flex;
-                &::-webkit-scrollbar {
-                    width:0;
-                }
-                &::-webkit-scrollbar-thumb {
-                    background-color: var(--secondary_color);
-                    border-radius: 1rem;
-                }
-                &::-webkit-scrollbar-track {
-                    background-color: none;
-                }
+            }
+
+            .section_avalibles::-webkit-scrollbar {
+                margin: 0 1rem; 
+                width:5px;
+            }
+
+            .section_avalibles::-webkit-scrollbar-thumb {
+                background-color: var(--secondary_color);
+                border-radius: 5rem;
+            }
+
+            .section_avalibles::-webkit-scrollbar-track {
+                background-color: none;
             }
 
             .game_card {
@@ -223,7 +227,7 @@ class Avalible extends HTMLElement {
             const heartSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             heartSvg.setAttribute("viewBox", "0 0 24 24");
             heartSvg.innerHTML = `
-            <path stroke="hsl(40, 88%, 51%)" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+            <path stroke="hsl(40, 88%, 51%)" d="M12 18C12 19 12.25 19.92 12.67 20.74L12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 9.93 21.5 11.26 20.62 12.61C19.83 12.23 18.94 12 18 12C14.69 12 12 14.69 12 18M19 14H17V17H14V19H17V22H19V19H22V17H19V14Z" />
             `;
             heartSvg.classList.add('heart-svg');
             card.appendChild(heartSvg);
@@ -232,5 +236,4 @@ class Avalible extends HTMLElement {
 
 }
 customElements.define('avalible_games-component', Avalible);
-
 
