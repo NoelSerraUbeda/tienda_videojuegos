@@ -5,7 +5,7 @@ import './footer.js';
 import './product_details.js';
 import './principal_navbar.js';
 import './recent_games.js';
-import './secondary_navbar.js';
+import './platforms.js';
 import './slider.js';
 import './pay_resume.js';
 import './product_resume.js';
