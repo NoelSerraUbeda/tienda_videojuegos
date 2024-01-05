@@ -25,7 +25,7 @@ class Avalible extends HTMLElement {
         hearts.forEach(heart => {
             heart.addEventListener('click', event => {
                 event.stopPropagation();
-                window.location.href = 'https://i.ytimg.com/vi/T8VBMEbm7Cw/hq2.jpg?sqp=-oaymwEoCOADEOgC8quKqQMcGADwAQH4AeYCgALoAooCDAgAEAEYfyAiKDYwDw==&rs=AOn4CLAJIBIvyBVOB_TKs-u3L6XtVB1hcA';
+                alert("Agregado a Favoritos")
             });
         });
     }
