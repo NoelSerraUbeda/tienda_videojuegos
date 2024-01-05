@@ -102,6 +102,12 @@ class Slider extends HTMLElement {
                 .dot.active {
                     background-color: var(--primary_color);
                 }
+
+                @media only screen and (max-width: 600px) {
+                    .slider {
+                        display:none;
+                    }
+                }
             </style>
         `;
     }

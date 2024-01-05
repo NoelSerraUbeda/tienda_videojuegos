@@ -213,7 +213,7 @@ class Avalible extends HTMLElement {
                 margin: 1.5rem;
                 fill:none;
                 width:3rem;
-                z-index:999;
+                z-index:99;
                 transition: transform 0.3s;
             }
 

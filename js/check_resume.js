@@ -44,7 +44,7 @@ class Resume extends HTMLElement {
                     <button><a href="checkout.html">Proceder al Pago</a></button>
                 </div>
                 <div class="pay_platform">
-                    <a href="https://i.makeagif.com/media/4-15-2022/eXwggD.gif"><button class="paypal"></button></a>
+                    <button class="paypal"></button>
                     <button class="stripe"></button>
                 </div>
                 <p>2 Articulos</p>

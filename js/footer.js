@@ -142,6 +142,15 @@ class Footer extends HTMLElement {
                     transform: rotate(-3deg);
                 }
             }
+        @media only screen and (max-width: 600px) {
+            .footer_bar {
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+            }
+        }
+
+
         </style>
 
       `;

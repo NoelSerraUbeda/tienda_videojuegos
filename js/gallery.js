@@ -69,6 +69,7 @@ class Gallery extends HTMLElement {
                 .modal-content {
                     max-width: 100%;
                     max-height: 100%;
+                    z-index:999;
                 }
 
                 .modal-content {

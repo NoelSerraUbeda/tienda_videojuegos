@@ -30,7 +30,7 @@ class PayZone extends HTMLElement {
                     <label for="codigoDescuento">¿Tienes un código de descuento?</label><br>
                     <input maxlength="23" type="text" id="codigoDescuento" name="codigoDescuento"
                         placeholder="Ingrese el código">
-                    <button type="button"><a href="https://media.tenor.com/BOA6Ta96tzQAAAAM/yuhyuharianagrande-aleshk.gif">Aplicar</a></button>
+                        <a href="https://media.tenor.com/BOA6Ta96tzQAAAAM/yuhyuharianagrande-aleshk.gif"><button type="button">Aplicar</button></a>
                     <h5>Al hacer clic en "Aplicar", aceptas los <a href="#">términos y condiciones</a>.</h5>
                 </form>
                 </div>

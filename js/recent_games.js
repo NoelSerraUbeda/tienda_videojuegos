@@ -41,18 +41,20 @@ class Recent extends HTMLElement {
             </svg>
         </div>
         <section class="section_recent">
-            <div class="game_card" data-title="Mario is Gaming" data-price="29.99">
-                <img src="images/box_art4.jpg" alt="box-art1">
-                <p class="sale">20%</p>
-            </div>
-            <div class="game_card" data-title="Painting Simulator" data-price="19.99">
-                <img src="images/box_art3.png" alt="box-art2">
-            </div>
-            <div class="game_card" data-title="Yoshi Commits Tax Fraud" data-price="39.99">
-                <img src="images/box_art1.png" alt="box-art3">
-            </div>
-            <div class="game_card" data-title="Monster Hunter World" data-price="39.99">
-                <img src="https://gamefaqs.gamespot.com/a/box/4/1/9/635419_front.jpg" alt="box-art4">
+            <div class="section_recent_games">
+                <div class="game_card" data-title="Mario is Gaming" data-price="29.99">
+                    <img src="images/box_art4.jpg" alt="box-art1">
+                    <p class="sale">20%</p>
+                </div>
+                <div class="game_card" data-title="Painting Simulator" data-price="19.99">
+                    <img src="images/box_art3.png" alt="box-art2">
+                </div>
+                <div class="game_card" data-title="Yoshi Commits Tax Fraud" data-price="39.99">
+                    <img src="images/box_art1.png" alt="box-art3">
+                </div>
+                <div class="game_card" data-title="Monster Hunter World" data-price="39.99">
+                    <img src="https://gamefaqs.gamespot.com/a/box/4/1/9/635419_front.jpg" alt="box-art4">
+                </div>
             </div>
         </section>
 
@@ -68,20 +70,41 @@ class Recent extends HTMLElement {
                 align-items:center;
                 gap:3rem;
             }
-
+            
             h2 {
                 font-size: var(--title);
                 margin: 0
             }
-
+            
             .head_text svg{
                 width:4rem;
             }
-
-            .section_recent {
+            
+            .section_recent_games {
                 align-items: center;
                 display: flex;
-                margin: 0 0rem 2rem 0rem;
+            }
+            
+            .section_recent {
+                overflow-y: hidden;
+                overflow-x: auto; 
+                align-items: center;
+                margin: 0 0 2rem 0; 
+                display: flex;
+            }
+
+            .section_recent::-webkit-scrollbar {
+                margin: 0 1rem; 
+                width:5px;
+            }
+
+            .section_recent::-webkit-scrollbar-thumb {
+                background-color: var(--secondary_color);
+                border-radius: 5rem;
+            }
+
+            .section_recent::-webkit-scrollbar-track {
+                background-color: none;
             }
 
             .game_card {

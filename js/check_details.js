@@ -17,7 +17,7 @@ class Check extends HTMLElement {
         <form class="checkout_details" method="post">
             <h1>Checkout</h1>
             
-            <h2>Detalles de Envío</h2>
+            <h2>Detalles del Comprador</h2>
             <label for="nombre">Nombre completo:</label>
             <input type="text" id="nombre" name="nombre" required>
 
@@ -29,17 +29,6 @@ class Check extends HTMLElement {
 
             <label for="correo">Correo electrónico del comprador:</label>
             <input type="email" id="correo" name="correo" required>
-
-            <h2>Información del Pago</h2>
-
-            <label for="numero_tarjeta">Número de tarjeta de crédito:</label>
-            <input type="text" id="numero_tarjeta" name="numero_tarjeta" required>
-
-            <label for="fecha_vencimiento">Fecha de vencimiento:</label>
-            <input type="text"  name="fecha_vencimiento" placeholder="MM/AA" required>
-
-            <label for="cvv">Código de seguridad de la tarjeta (CVV/CVC):</label>
-            <input type="text" id="cvv" name="cvv" required>
         </form>
         
         <style>
