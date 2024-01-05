@@ -30,7 +30,7 @@ class PayZone extends HTMLElement {
                     <label for="codigoDescuento">¿Tienes un código de descuento?</label><br>
                     <input maxlength="23" type="text" id="codigoDescuento" name="codigoDescuento"
                         placeholder="Ingrese el código">
-                    <button type="button">Aplicar</button>
+                    <button type="button"><a href="https://media.tenor.com/BOA6Ta96tzQAAAAM/yuhyuharianagrande-aleshk.gif">Aplicar</a></button>
                     <h5>Al hacer clic en "Aplicar", aceptas los <a href="#">términos y condiciones</a>.</h5>
                 </form>
                 </div>
@@ -59,8 +59,8 @@ class PayZone extends HTMLElement {
                 }
 
                 .checkout_button button{
-                    width: 60%;
-                    height: 100%;
+                    width: fit-content;
+                    padding:1rem;
                     font-size: var(--title);
                     background-color: var(--primary_color);
                     border: 3px solid var(--white);
@@ -84,8 +84,8 @@ class PayZone extends HTMLElement {
                     width: 100%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: start;
                     align-items: start;
+                    gap:1rem;
                 }
 
                 .price_summary {
@@ -120,7 +120,8 @@ class PayZone extends HTMLElement {
                 }
 
                 .coupon_area button {
-                    width: 15%;
+                    width: fit-content;
+                    padding:1rem;
                     height: 4rem;
                     margin: 0 2rem 0 0;
                     cursor: pointer;
